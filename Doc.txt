@@ -1,0 +1,22 @@
+The "marsRoverCommands" function simulates the movement of a Mars Rover based on a set of commands, and an optional set of obstacles that the Rover should avoid.
+The function takes in 5 parameters:
+    - x (number): the starting x-coordinate of the Rover.
+    - y (number): the starting y-coordinate of the Rover.
+    - heading (string): the starting heading of the Rover, this must be one of: "NORTH", "SOUTH", "EAST" or "WEST"
+    - commands (string): a string of commands for the Rover, where each character is a command, it can be any of: "F", "B", "L", "R"
+    - obstacles (Array of arraies): an array of obstacles where each element is represented by an array of two numbers, [x, y], indicating the x and y coordinates of an obstacle.
+
+How it Works :
+    Part 1:
+    The function will loop over the commands, and will move the Rover forward or backward (depending on the command) if the command is "F" or "B". 
+    If the command is "L" or "R" it will rotate the Rover in the direction of the command.
+
+    Part 2:
+    The function will then check if the next position of the Rover contains an obstacle, and if so, it will return a string indicating that the Rover has stopped due to a collision. 
+    If there are no obstacles in the next position, the Rover's coordinates and heading are updated.
+
+    After processing all commands, the function will return a string of the Rover's final position and heading in the format: `(x, y) heading`
+    
+    The function will return an error message when using any other commands other than F B L R
+
+
